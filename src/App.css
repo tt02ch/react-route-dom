@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header */
+.header {
+  background-color: #e8e8e8;
+  padding: 15px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+
+.header__logo a {
+  font-size: 28px;
+  font-weight: 700;
+  color: orangered;
+}
+
+.header__menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header__menu ul li {
+  margin: 0 10px;
+}
+
+.header__menu ul li a {
+  font-weight: 600;
+  color: black;
+}
+
+.header__menu ul li a:hover,
+.header__menu ul li a.active {
+  color: orangered;
+}
+
+.header__account a {
+  margin-left: 10px;
+}
+
+.header__menu ul li {
+  position: relative;
+}
+
+.header__menu ul li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #cbcbcb;
+  padding: 10px;
+  flex-wrap: wrap;
+  width: 200px;
+  border-radius: 5px;
+  display: none;
+}
+
+.header__menu ul li:hover ul {
+  display: inline-flex;
+}
+/* End Header */
+
+/* Button */
+.button {
+  background-color: orangered;
+  border: 1px solid orangered;
+  font-weight: 600;
+  color: white;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.button--outline {
+  background-color: transparent;
+  color: orangered;
+}
+
+.button--outline:hover {
+  background-color: orangered;
   color: white;
 }
+/* End Button */
 
-.App-link {
-  color: #61dafb;
+/* Footer */
+.footer {
+  background-color: black;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+/* End Footer */
+.products{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.products__item{
+  border: 1px solid black;
+  margin: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagination button{
+  padding: 10px;
+  margin-right: 8px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.pagination button:hover{
+  color: blue;
+}
+.pagination button.active{
+  background-color: yellowgreen;
 }
