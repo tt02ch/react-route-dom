@@ -121,3 +121,19 @@ a {
 .pagination button.active{
   background-color: yellowgreen;
 }
+.ff{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+table {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}

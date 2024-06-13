@@ -1,6 +1,9 @@
 import { Link, NavLink } from "react-router-dom"
+import { useSelector } from "react-redux"
 
+import { FaCartShopping } from "react-icons/fa6";
 export const Header = () => {
+  const cart = useSelector(state => state.cartReducer.cart);
   return (
     <>
       <header className="header">
@@ -29,9 +32,11 @@ export const Header = () => {
             <li>
               <NavLink to="/articles">Bài Viết</NavLink>
             </li>
+         
           </ul>
         </div>
         <div className="header__account">
+          <Link to="/cart"><FaCartShopping/>({cart.length})</Link>
           <Link to="/login" className="button">
             Đăng Nhập
           </Link>
